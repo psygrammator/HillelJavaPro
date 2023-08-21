@@ -1,8 +1,16 @@
+# Ignore files
+*.iml
+
+# Ignore folders
+.idea
+out
+
 # Compiled class file
 *.class
 
 # Log file
 *.log
+*.txt
 
 # BlueJ files
 *.ctxt
