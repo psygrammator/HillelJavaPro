@@ -28,7 +28,8 @@ public class HomeWorkApp {
         // Task 8
         printAndNum("Not bad", 5);
         // Task 9
-        leapYears();
+        final var yearsList = Arrays.asList(100, 400, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033);
+        yearsList.forEach(HomeWorkApp::leapYears);
     }
 
     private static void printThreeWords()
@@ -82,9 +83,8 @@ public class HomeWorkApp {
         }
     }
 
-    private static void leapYears() {
-        final var yearsList = Arrays.asList(100, 400, 2023, 2024, 2025, 2026, 2027, 2028, 2029, 2030, 2031, 2032, 2033);
-        yearsList.forEach(year -> PrintManager.info(year + " is leap: " + (year % 4 == 0 && (year % 400 == 0 || year % 100 != 0))));
+    private static void leapYears(int year) {
+        PrintManager.info(year + " is leap: " + (year % 4 == 0 && (year % 400 == 0 || year % 100 != 0)));
     }
 }
 
