@@ -4,7 +4,6 @@ import top.jsoft.commons.util.PrintManager;
 import top.jsoft.commons.util.Rnd;
 
 import java.util.Scanner;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * Created by psygrammator
@@ -13,13 +12,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 public class RunApp {
     private static void findSymbolOccurance(String msg, char symbol)
     {
-        AtomicInteger sumbols = new AtomicInteger(0);
+        int sumbols = 0;
         for(char s : msg.toCharArray())
         {
             if(s == symbol)
-                sumbols.incrementAndGet();
+                sumbols++;
         }
-        PrintManager.info("Msg: " + msg + " char: " + symbol + " symbols: " + sumbols.get());
+        PrintManager.info("Msg: " + msg + " char: " + symbol + " symbols: " + sumbols);
     }
 
     private static void findWordPosition(String source, String target)
