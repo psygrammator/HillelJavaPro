@@ -16,13 +16,13 @@ public class ArrayValueCalculator {
         }
         for (String[] strings : arr) {
             if (strings.length != 4) {
-                throw new ArraySizeException();
+                throw new ArraySizeException("strings.length != 4 -> " + strings.length);
             }
             for (String string : strings) {
                 try {
                     count = count + Integer.parseInt(string);
                 } catch (NumberFormatException e) {
-                    throw new ArrayDataException(e);
+                    throw new ArrayDataException("Error number format: " + e);
                 }
             }
 
@@ -35,16 +35,10 @@ public class ArrayValueCalculator {
         //valid
         try
         {
-            try
-            {
-                int result = doCalc(arrayValid);
-                PrintManager.info(result);
-            }
-            catch (ArraySizeException e) {
-                PrintManager.error("" + e);
-            }
+            int result = doCalc(arrayValid);
+            PrintManager.info(String.valueOf(result));
         }
-        catch (ArrayDataException e) {
+        catch (ArrayDataException | ArraySizeException e) {
             PrintManager.error("" + e);
         }
 
@@ -52,16 +46,10 @@ public class ArrayValueCalculator {
         String[][] arrayInvalid = new String[][]{{"1", "2", "3", "4"}, {"5", "6", "7", "8"}, {"9", "10", "11", "12"}, {"13", "14", "15", "q"}};
         try
         {
-            try
-            {
-                int result = doCalc(arrayInvalid);
-                PrintManager.info(result);
-            }
-            catch (ArraySizeException e) {
-                PrintManager.error("" + e);
-            }
+            int result = doCalc(arrayInvalid);
+            PrintManager.info(String.valueOf(result));
         }
-        catch (ArrayDataException e) {
+        catch (ArrayDataException | ArraySizeException e) {
             PrintManager.error("" + e);
         }
     }
