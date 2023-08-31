@@ -3,7 +3,6 @@ package top.jsoft.commons.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Objects;
 
 /**
  * Created by psygrammator
@@ -12,15 +11,15 @@ import java.util.Objects;
  */
 public class PrintManager {
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy HH:mm");
-    public static void info(Object msg)
+    public static <V> void info(V msg)
     {
         System.out.println("[" + dateFormat.format(new Date(System.currentTimeMillis())) + "][INFO]: " + msg);
     }
-    public static void warn(Object msg)
+    public static <V> void warn(V msg)
     {
         System.out.println("[" + dateFormat.format(new Date(System.currentTimeMillis())) + "][WARN]: " + msg);
     }
-    public static void error(Object msg)
+    public static <V> void error(V msg)
     {
         System.out.println("[" + dateFormat.format(new Date(System.currentTimeMillis())) + "][ERROR]: " + msg);
     }
