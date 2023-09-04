@@ -1,7 +1,7 @@
 package top.jsoft.homework.task6;
 
-import top.jsoft.commons.util.PrintManager;
 import top.jsoft.commons.util.Rnd;
+import top.jsoft.commons.util.PrintManager;
 
 import java.util.Arrays;
 

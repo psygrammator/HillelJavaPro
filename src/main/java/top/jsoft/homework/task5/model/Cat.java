@@ -1,9 +1,9 @@
 package top.jsoft.homework.task5.model;
 
 import lombok.Getter;
-import top.jsoft.commons.util.PrintManager;
 import top.jsoft.homework.task5.enums.PatricipantType;
 import top.jsoft.homework.task5.interfaces.Participant;
+import top.jsoft.commons.util.PrintManager;
 
 /**
  * Created by psygrammator

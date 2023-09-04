@@ -1,12 +1,12 @@
 package top.jsoft.homework.task5;
 
-import top.jsoft.commons.util.PrintManager;
 import top.jsoft.commons.util.Rnd;
 import top.jsoft.homework.task5.interfaces.Shape;
-import top.jsoft.homework.task5.model.*;
 import top.jsoft.homework.task5.shape.Circle;
 import top.jsoft.homework.task5.shape.Square;
 import top.jsoft.homework.task5.shape.Triangle;
+import top.jsoft.commons.util.PrintManager;
+import top.jsoft.homework.task5.model.*;
 
 import java.util.Arrays;
 
