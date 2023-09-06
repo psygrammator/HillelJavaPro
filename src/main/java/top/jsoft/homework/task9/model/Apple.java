@@ -5,7 +5,6 @@ package top.jsoft.homework.task9.model;
  * group jsoft.top
  */
 public class Apple extends Fruit {
-
     public Apple() {
         super(1.0f);
     }
