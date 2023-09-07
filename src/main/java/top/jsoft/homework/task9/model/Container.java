@@ -48,12 +48,12 @@ public class Container<T extends Fruit> implements Comparable<Double> {
         items.clear();
     }
 
-    public void merge(Container<T> list)
+    public void merge(Container<T> container)
     {
-        if(this != list)
+        if(this != container)
         {
-            items.addAll(list.items);
-            list.clear();
+            items.addAll(container.items);
+            container.clear();
         }
     }
 }
