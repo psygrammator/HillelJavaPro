@@ -17,7 +17,7 @@ public class PhoneDirectory {
     private List<Record> records = new ArrayList<>();
     public void add(Record record)
     {
-        if(records.stream().filter(name -> name.getName().equalsIgnoreCase(record.getName())).toList().size() < 2)
+        if(records.stream().filter(r -> r.getName().equalsIgnoreCase(record.getName())).noneMatch(r -> record.getPhone().equalsIgnoreCase(r.getPhone())))
             records.add(record);
     }
 
