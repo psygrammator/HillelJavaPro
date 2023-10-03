@@ -23,22 +23,20 @@ public class ValueCalculator {
         System.arraycopy(array, 0, a1, 0, arrayHalfSize);
         System.arraycopy(array, arrayHalfSize, a2, 0, arrayHalfSize);
 
-        new Thread(() -> {
-            for (int i = 0; i < a1.length; i++) {
-                a1[i] = (float) (a1[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-            }
-        }).start();
-
-        new Thread(() -> {
-            for (int i = 0; i < a2.length; i++) {
-                a2[i] = (float) (a2[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
-            }
-        }).start();
+        new Thread(() -> arrayRecalc(a1)).start();
+        new Thread(() -> arrayRecalc(a2)).start();
 
         System.arraycopy(a1, 0, array, 0, arrayHalfSize);
         System.arraycopy(a2, 0, array, arrayHalfSize, arrayHalfSize);
 
         PrintManager.info("Time millis: " + (System.currentTimeMillis() - start));
+    }
+
+    private void arrayRecalc(float[] array)
+    {
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (float) (array[i] * Math.sin(0.2f + i / 5) * Math.cos(0.2f + i / 5) * Math.cos(0.4f + i / 2));
+        }
     }
 
     public static void main(String[] args) {
