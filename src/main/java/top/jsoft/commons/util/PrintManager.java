@@ -23,4 +23,9 @@ public class PrintManager {
     {
         System.out.println("[" + dateFormat.format(new Date(System.currentTimeMillis())) + "][ERROR]: " + msg);
     }
+
+    public static <V> void printSection(V msg)
+    {
+        System.out.println("[" + dateFormat.format(new Date(System.currentTimeMillis())) + "][INFO]: ====================[" + msg + "]====================");
+    }
 }
