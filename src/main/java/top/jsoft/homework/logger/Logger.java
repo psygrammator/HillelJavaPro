@@ -24,8 +24,7 @@ public abstract class Logger {
     }
 
     public void debug(String msg) {
-        if (loggerConfiguration.getLoggingLevel() == LoggingLevel.DEBUG)
-            log(String.format(loggerConfiguration.getTextFormat(), LocalDateTime.now(), LoggingLevel.DEBUG, msg));
+        log(String.format(loggerConfiguration.getTextFormat(), LocalDateTime.now(), LoggingLevel.DEBUG, msg));
     }
 
     public void info(String msg) {
