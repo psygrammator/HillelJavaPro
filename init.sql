@@ -34,6 +34,8 @@ CREATE TABLE Schedule(
 
 INSERT INTO Schedule(name, updatedAt, lessons) VALUES ('Igor', now(), 1);
 INSERT INTO Schedule(name, updatedAt, lessons) VALUES ('Alex', now(), 1);
-INSERT INTO Schedule(name, updatedAt, lessons) VALUES ('Jax1', now(), 1);
+INSERT INTO Schedule(name, updatedAt, lessons) VALUES ('Jax', now(), 1);
 -- INSERT INTO Schedule(name, updatedAt, lessons) VALUES ('Jax', now(), 4); -- ERROR
+
+
 
