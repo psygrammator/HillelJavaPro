@@ -5,13 +5,12 @@ import top.jsoft.commons.util.PrintManager;
 import top.jsoft.homework.jdbc.Config;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 
 /**
  * Created by psygrammator
  * group jsoft.top
  */
-public class DataBaseConnection {
+public class DataBaseConnection implements AutoCloseable {
     private static final MariaDbPoolDataSource DATABASE_POOL = new MariaDbPoolDataSource(Config.DATABASE_URL + "&user=" + Config.DATABASE_LOGIN + "&password=" + Config.DATABASE_PASSWORD + "&maxPoolSize=100");
 
     public static void init()
@@ -44,6 +43,7 @@ public class DataBaseConnection {
         return con;
     }
 
+    @Override
     public void close()
     {
         try
