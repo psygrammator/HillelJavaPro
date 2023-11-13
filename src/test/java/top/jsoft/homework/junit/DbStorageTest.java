@@ -24,7 +24,6 @@ public class DbStorageTest {
         storage.clear();
     }
 
-    @Ignore
     @Test
     public void testDbStorage() {
         List<String> data = List.of("1", "2", "3", "4", "5");
