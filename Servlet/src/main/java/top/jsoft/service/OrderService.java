@@ -11,7 +11,7 @@ import java.util.List;
  * Created by psygrammator
  * group jsoft.top
  */
-public class GetService {
+public class OrderService {
     private final OrderDAO orderDAO = OrderDAO.getInstance();
 
     public Order getOrder(int id)

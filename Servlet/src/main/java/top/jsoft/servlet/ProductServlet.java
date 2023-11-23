@@ -6,7 +6,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import top.jsoft.service.GetService;
+import top.jsoft.service.OrderService;
 
 import java.io.IOException;
 
@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 @WebServlet("/product")
 public class ProductServlet extends HttpServlet {
-    private final GetService orderService = new GetService();
+    private final OrderService orderService = new OrderService();
     private final Gson gson = new Gson();
 
     @Override

@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import top.jsoft.model.Order;
-import top.jsoft.service.GetService;
+import top.jsoft.service.OrderService;
 
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -18,7 +18,7 @@ import java.io.PrintWriter;
  */
 @WebServlet("/order")
 public class OrderServlet extends HttpServlet {
-    private final GetService orderService = new GetService();
+    private final OrderService orderService = new OrderService();
     private final Gson gson = new Gson();
 
     @Override

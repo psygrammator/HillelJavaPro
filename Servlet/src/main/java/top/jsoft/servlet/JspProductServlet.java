@@ -7,7 +7,7 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import top.jsoft.model.Product;
-import top.jsoft.service.GetService;
+import top.jsoft.service.OrderService;
 
 import java.io.IOException;
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.List;
  */
 @WebServlet("/products")
 public class JspProductServlet extends HttpServlet {
-    private final GetService getService = new GetService();
+    private final OrderService getService = new OrderService();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
