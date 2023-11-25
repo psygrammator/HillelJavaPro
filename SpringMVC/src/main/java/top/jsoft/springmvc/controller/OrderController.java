@@ -33,4 +33,15 @@ public class OrderController {
         return orderService.getOrders();
     }
 
+    @PostMapping("/addOrder")
+    public void addOrder(@RequestBody Order order)
+    {
+        orderService.addOrder(order);
+    }
+    @PostMapping("/deleteOrder")
+    public void deleteOrder(@RequestBody int id)
+    {
+        orderService.deleteOrder(id);
+    }
+
 }
