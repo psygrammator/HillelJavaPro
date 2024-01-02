@@ -1,0 +1,6 @@
+top\jsoft\springmvc2\config\Config.class
+top\jsoft\springmvc2\model\News.class
+top\jsoft\springmvc2\service\NewsService.class
+top\jsoft\springmvc2\service\NewsService$1.class
+top\jsoft\springmvc2\controller\NewsController.class
+top\jsoft\springmvc2\SpringMvc2Application.class

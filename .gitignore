@@ -5,6 +5,7 @@ src/main/java/top/jsoft/classwork
 # Ignore folders
 .idea
 out
+src/main/java/top/jsoft/classwork
 
 # Compiled class file
 *.class
